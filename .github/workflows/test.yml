@@ -33,4 +33,6 @@ jobs:
           python -m pip install .
           python -m pip list
       - name: Test with pytest
-        run: pytest --doctest-modules --durations=10 --pyargs example
+        run: |
+          pytest --durations=10 --pyargs example
+          pytest --doctest-modules --durations=10 --pyargs example
